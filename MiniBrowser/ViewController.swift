@@ -44,15 +44,6 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-          if (text == "\n") {
-              textView.resignFirstResponder()
-          }
-          return true
-      }
-}
-
 extension ViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
